@@ -1,0 +1,22 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+
+<c:set var="layoutContext" value="/WEB-INF/jsp/layout" scope="request"/>
+<c:set var="partialContext" value="/WEB-INF/jsp/partial" scope="request"/>
+<c:set var="errorContext" value="/WEB-INF/jsp/error" scope="request"/>
+<c:set var="widgetContext" value="/WEB-INF/jsp/widgets" scope="request"/>
+
+<c:set var="jsContext" value="${pageContext.request.contextPath}/js" scope="request"/>
+<c:set var="jsApi" value="${pageContext.request.contextPath}/js/apis" scope="request"/>
+<c:set var="jsComponente" value="${pageContext.request.contextPath}/js/componentes" scope="request"/>
+<c:set var="jsPagina" value="${pageContext.request.contextPath}/js/pagina" scope="request"/>
+<c:set var="cssContext" value="${pageContext.request.contextPath}/css" scope="request"/>
+<c:set var="imagesContext" value="${pageContext.request.contextPath}/images" scope="request"/>
+<c:set var="urlContext" value="${pageContext.request.contextPath}" scope="request"/>
+<c:set var="formulario" value="${sessaoUsuario.formulario}" scope="request"/>
+<c:set var="layout" value="${sessaoUsuario.formulario.layout}" scope="request"/>
+
+
+

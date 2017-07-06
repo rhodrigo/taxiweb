@@ -1,0 +1,16 @@
+.externalToolBuilders/*
+*.db
+*.class
+*.jar
+webapp/WEB-INF/classes/*
+webapp/WEB-INF/lib/*
+lib/*
+bin/*
+/bin
+target/*
+densidade/*
+deslocamento/*
+.settings
+.project
+.classpath
+/target/

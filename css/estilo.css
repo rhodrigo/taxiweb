@@ -1,0 +1,37 @@
+html, body, .container{
+	height: 100%;
+	width: 100%;
+}
+
+#mapa1, #mapa2, #mapa3{
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+#mapa1 iframe, #mapa2 iframe{
+	width: 100%;
+	height: 100%;
+} 	
+
+#map{
+	height: 100%;
+	width: 100%;
+}
+
+.paginacao-mapa{
+	text-align: center;
+	width: 100%;
+}
+
+h6{
+	margin: 0;
+	padding: 1em;
+	font-weight: bold;
+	background-color: #CCC;
+	color: #FFF;
+}
+
+.pagination{
+	margin: 0;
+}
