@@ -31,21 +31,21 @@ public class Database {
 		Long intervalo = (config.getDataHoraFim().getTime() - config.getDataHoraInicio().getTime()) / config.getMapas();
 
 		preparedStatement = connection.prepareStatement("SELECT distinct(imei), latitude, longitude FROM \"MB\".\"Dados_local_Taxi\" WHERE "
-				+ "ddd=? AND (meastime>=? AND meastime<?) AND (latitude>=? AND latitude<=?) AND " + "(longitude>=? AND longitude<=?);");
-
-		preparedStatement.setString(1, String.valueOf(config.getDdd()));
+				/*+ "ddd=? AND*/ + "(meastime>=? AND meastime<?) AND (latitude>=? AND latitude<=?) AND " + "(longitude>=? AND longitude<=?);");
+		
+		//preparedStatement.setString(1, String.valueOf(config.getDdd()));
 		start = new Timestamp(config.getDataHoraInicio().getTime() + (intervalo * mapa));
-		preparedStatement.setTimestamp(2, start);
+		preparedStatement.setTimestamp(1, start);
 		if (mapa == (config.getMapas() - 1)) {
 			end = config.getDataHoraFim();
 		} else {
 			end = new Timestamp(config.getDataHoraInicio().getTime() + (intervalo * (mapa + 1)));
 		}
-		preparedStatement.setTimestamp(3, end);
-		preparedStatement.setBigDecimal(4, config.getLatitudeMin());
-		preparedStatement.setBigDecimal(5, config.getLatitudeMax());
-		preparedStatement.setBigDecimal(6, config.getLongitudeMin());
-		preparedStatement.setBigDecimal(7, config.getLongitudeMax());
+		preparedStatement.setTimestamp(2, end);
+		preparedStatement.setBigDecimal(3, config.getLatitudeMin());
+		preparedStatement.setBigDecimal(4, config.getLatitudeMax());
+		preparedStatement.setBigDecimal(5, config.getLongitudeMin());
+		preparedStatement.setBigDecimal(6, config.getLongitudeMax());
 		ResultSet rs = preparedStatement.executeQuery();
 		List<Point> list = new ArrayList<Point>();
 		while (rs.next()) {

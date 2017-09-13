@@ -459,13 +459,13 @@ public class App {
 				double resultadoU = round(point.getU().doubleValue(), 5);
 
 				if (leitor.ehMaiorQueVizinhos(i, j) && celula.possuiTaxi()) {
-					Circle circle = JavaScript.drawCircle("UMax", "red", resultadoU, point.getLatitude(), point.getLongitude());
+					Circle circle = JavaScript.drawCircle("Sorvedouro", "red", resultadoU, point.getLatitude(), point.getLongitude());
 					code.append(circle.draw());
 					mapa.put(circle);
 				}
 
 				if (leitor.ehMenorQueVizinhos(i, j) && celula.possuiTaxi()) {
-					Circle circle = JavaScript.drawCircle("UMin", "blue", resultadoU, point.getLatitude(), point.getLongitude());
+					Circle circle = JavaScript.drawCircle("Fonte", "blue", resultadoU, point.getLatitude(), point.getLongitude());
 					code.append(circle.draw());
 					mapa.put(circle);
 				}
@@ -508,13 +508,13 @@ public class App {
 				double resultadoS = round(point.getS().doubleValue(), 5);
 
 				if (leitor.ehMaiorQueVizinhos(i, j) && celula.possuiTaxi()) {
-					Circle circle = JavaScript.drawCircle("SMax", "orange", resultadoS, point.getLatitude(), point.getLongitude());
+					Circle circle = JavaScript.drawCircle("Rotacional Max", "orange", resultadoS, point.getLatitude(), point.getLongitude());
 					code.append(circle.draw());
 					mapa.put(circle);
 				}
 
 				if (leitor.ehMenorQueVizinhos(i, j) && celula.possuiTaxi()) {
-					Circle circle = JavaScript.drawCircle("SMin", "yellow", resultadoS, point.getLatitude(), point.getLongitude());
+					Circle circle = JavaScript.drawCircle("Rotacional Min", "yellow", resultadoS, point.getLatitude(), point.getLongitude());
 					code.append(circle.draw());
 					mapa.put(circle);
 				}

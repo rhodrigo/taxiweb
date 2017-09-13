@@ -74,9 +74,6 @@
 			</div>
 
 			<div class="form-group">
-				<label for="inputDDD" class="control-label">DDD</label> <input type="text" class="form-control" name="filtro.ddd" id="inputDDD" placeholder="DDD" value="21">
-			</div>
-			<div class="form-group">
 				<label for="inputDataInicio" class="control-label">Data de Início</label> <input type="text" class="form-control" name="filtro.dataInicio" id="inputDataInicio" placeholder="Data de Início"
 					value="22/06/2016 12:00">
 			</div>

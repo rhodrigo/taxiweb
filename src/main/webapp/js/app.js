@@ -292,19 +292,19 @@ function loadCircle(circulo, mapa) {
 		.bindPopup(circulo.prefix + ':' + circulo.value)
 		.openPopup();
 	
-	if(circulo.prefix == 'UMax'){
+	if(circulo.prefix == 'Sorvedouro'){
 		circleUMax.matriz.push(circle);
 		circleUMax.group.addLayer(circle);
 	}
-	if(circulo.prefix == 'UMin'){
+	if(circulo.prefix == 'Fonte'){
 		circleUMin.matriz.push(circle);
 		circleUMin.group.addLayer(circle);
 	}	
-	if(circulo.prefix == 'SMax'){
+	if(circulo.prefix == 'Rotacional Max'){
 		circleSMax.matriz.push(circle);
 		circleSMax.group.addLayer(circle);
 	}
-	if(circulo.prefix == 'SMin'){
+	if(circulo.prefix == 'Rotacional Min'){
 		circleSMin.matriz.push(circle);
 		circleSMin.group.addLayer(circle);
 	}
